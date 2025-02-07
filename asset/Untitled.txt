@@ -1,0 +1,15 @@
+title YT FCHK
+
+User->YT_BOX: Type fact and resource if present. 
+Backend->Other-Users: If User has reported fact: Display fact.
+
+Other-Users->Backend: Send Votes or Refutal.
+
+Backend->>YT_BOX: Handle refutals to find best positive match and display for voting
+Other-Users->YT_BOX: Send Right or Wrong vote.
+
+YT_BOX->Backend: If right votes exceed threshold: Check {video, fact} and match resource. 
+Backend->YT_BOX: If source is matched, publish fact.
+
+YT_BOX->User: Update YT_BOX to show fact and disable write.
+YT_BOX->Other-Users: Disable votes. Only show fact.
