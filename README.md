@@ -20,4 +20,4 @@ An extension to crowd source facts to show for YouTube Videos.
 
 ## Sequence Diagram
 
-[Sequence Diagram](./asset/ytfchkseqd.svg)
+![Sequence Diagram](./asset/ytfchkseqd.svg)
